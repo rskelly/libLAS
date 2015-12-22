@@ -1327,7 +1327,7 @@ std::vector<liblas::TransformPtr> GetTransforms(po::variables_map vm, bool verbo
 
         liblas::Point maximum(&header);
         maximum.SetCoordinates(b.maxx(), b.maxy(), b.maxz());
-        
+
         trans.transform(minimum);
         trans.transform(maximum);
         b = liblas::Bounds<double>(minimum, maximum);
